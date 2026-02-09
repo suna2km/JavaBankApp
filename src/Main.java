@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Account a1 = new Account();
+        Account a2 = new Account("John", "Doe");
     }
 }
