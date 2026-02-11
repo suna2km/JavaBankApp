@@ -1,10 +1,10 @@
 public class Account {
 
     private static int lastId = 0;
-    private int id;
+    private final int id;
     private String firstName;
     private String lastName;
-    private Double balance;
+    private double balance;
 
     public Account() {
 
@@ -17,6 +17,8 @@ public class Account {
         this();
         this.firstName = firstName;
         this.lastName = lastName;
+
+
     }
 
     public double getBalance() {
@@ -28,5 +30,14 @@ public class Account {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public void
+    public void deposit(double amount) {
+        this.balance += amount;
+    }
+    public void withdrawal(double amount) {
+        this.balance -= amount;
+    }
+
+    public String toString() {
+        return
+    }
 }
