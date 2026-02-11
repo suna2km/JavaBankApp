@@ -13,7 +13,7 @@ public class Main {
             System.out.println(a2.getFirstName());
             System.out.println(a2.getLastName());
 
-        } catch (IllegalAccessException e){
+        } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
     }
