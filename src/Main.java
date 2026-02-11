@@ -1,6 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Account a1 = new Account();
-        Account a2 = new Account("John", "Doe");
+        try {
+            Account a1 = new Account();
+            Account a2 = new Account("John", "Doe");
+            System.out.println(a1.getId());
+            System.out.println(a1.getFirstName());
+            System.out.println(a1.getLastName());
+
+            System.out.println();
+
+            System.out.println(a2.getId());
+            System.out.println(a2.getFirstName());
+            System.out.println(a2.getLastName());
+
+        } catch (IllegalAccessException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
