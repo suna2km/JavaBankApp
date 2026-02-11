@@ -16,9 +16,6 @@ public class Account {
     public Account(String firstName, String lastName) {
         this();
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-
         setFirstName(firstName);
         setLastName(lastName);
 
@@ -64,16 +61,16 @@ public class Account {
     }
     public void withdrawal(double amount) {
         if (amount <= 0 ){
-            throw new IllegalArgumentException("invalid amount! Amount can't be negative!");
+            throw new IllegalArgumentException("Invalid amount [" + amount + "]! Amount has to be greater than zero.");
         }
         else if (amount > balance) {
-            throw new IllegalArgumentException("invalid amount! Amount can't be greater than balance!");
+            throw new IllegalArgumentException("Invalid amount ["+ amount + "]! Amount can not be greater than balance [" + balance +"].");
         }
         this.balance -= amount;
     }
 
     @Override
     public String toString() {
-        return id + " " + firstName + " " + lastName;
+        return "#" + id + ": " + firstName + " " + lastName;
     }
 }
