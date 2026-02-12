@@ -13,6 +13,7 @@ public class Account {
         this.lastName = "unknown";
         this.balance = 0.0;
     }
+
     public Account(String firstName, String lastName) {
         this();
 
@@ -23,10 +24,6 @@ public class Account {
 
     public double getBalance() {
         return balance;
-    }
-
-    public static int getLastId() {
-        return lastId;
     }
 
     public int getId() {
@@ -41,12 +38,23 @@ public class Account {
         return lastName;
     }
 
+    /**
+     * Allow setting of the account owner's first name.
+     * @param firstName account owner's first name
+     * @throws IllegalArgumentException ("Invalid first name! Name can't be blank for id: " + id)
+     */
     public void setFirstName(String firstName) {
         if (firstName == null || firstName.isEmpty()) {
             throw new IllegalArgumentException("Invalid first name! Name can't be blank for id: " + id);
         }
         this.firstName = firstName;
     }
+
+    /**
+     * Allow setting of the account owner's last name.
+     * @param lastName account owner's last name
+     * @throws IllegalArgumentException ("Invalid last name! Name can't be blank for id: " + id)
+     */
     public void setLastName(String lastName) {
         if (lastName == null || lastName.isEmpty()) {
             throw new IllegalArgumentException("invalid last name! Name can't be blank for id: " + id);
