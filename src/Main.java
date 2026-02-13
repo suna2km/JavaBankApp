@@ -1,3 +1,13 @@
+/**
+ * The Main class is used to test the Account class.
+ * This program creates Account objects and then displays each account's ID,
+ * first name, and last name to verify that the constructors and accessor
+ * methods work correctly.
+ * A try-catch block is used to handle thrown errors
+ *
+ * @author Suna Aregay
+ * @version 1.0
+ */
 public class Main {
     public static void main(String[] args) {
         try {
