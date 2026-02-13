@@ -48,7 +48,48 @@ CSC 160 Programming Fundamentals II: Section 2 assignment
 6. Displays updated account balance after successful transactions.
 
 ## Sample Output
+```
+================================================================================
+Welcome to the Bank App!
+================================================================================
 
+What is your first name? Suna
+What is your last name?  Aregay
+
+--------------------------------------------------------------------------------
+Account created! #1: Suna Aregay
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: no
+Invalid option. Please try again.
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: d
+What amount would you like to deposit? 1000.4455
+Invalid input. Please try again...
+What amount would you like to deposit? -76.32
+Invalid input. Please try again...
+What amount would you like to deposit? 178.33
+Deposit successful! Current balance: 178.33
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: w
+What amount would you like to withdraw? 200
+Invalid amount [200.0]! Amount can not be greater than balance [178.33].
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: w
+What amount would you like to withdraw? 50
+Withdrawal successful! Current balance: 128.33
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: q
+
+```
 ![Program Output](Project-Documentation/Sample_Output.jpeg)
 
 # New Concepts
