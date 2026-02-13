@@ -14,69 +14,96 @@ CSC 160 Programming Fundamentals II: Section 2 assignment
 - [Maintainers](#maintainers)
 
 ## Assignment Overview
-📚 This project is a console-based Java application that calculates invoice totals, conditionally applies discounts, and produces a professionally formatted receipt using printf. The assignment focuses on improving an existing application by adding discount logic, clean output formatting, and proper documentation.
+📚 This project is a console-based Banking Application built in Java using Object-Oriented Programming principles. The application allows a user to create a bank account and perform basic banking operations such as deposits and withdrawals while enforcing proper validation and error handling.
 
 ## How the Program Works
-1. The program prompts the user to enter invoice line items.
+1. Displays a welcome message.
 
-2. Each line item includes:
+2. Prompts the user for their first and last name.
 
-- Item description
+3. Creates a new account with:
 
-- Quantity
+    - An auto-generated account ID
 
-- Unit price
+    - The user’s full name
 
-- Discount eligibility
+    - A starting balance of $0.00
 
-3. The user can continue adding line items until they choose to stop.
+4. Prompts the user repeatedly to:
 
-4. A discount is applied only when the required conditions are met.
+    - Deposit money
 
-5. The receipt displays:
+    - Withdraw money
 
-- Line item details
+    - Quit the program
 
-- Subtotal
+5. Validates all inputs:
 
-- Discount percentage (if applicable)
+    - Rejects invalid menu options
 
-- Total savings (if applicable)
+    - Rejects invalid monetary values
 
-- Final receipt total
+    - Prevents withdrawals greater than the current balance
 
-6. Output is formatted using printf for clean alignment and readability.
+6. Displays updated account balance after successful transactions.
 
 ## Sample Output
+````
+================================================================================
+Welcome to the Bank App!
+================================================================================
 
-## Receipt with Discount Applied
+What is your first name? Suna
+What is your last name?  Aregay
 
-![Program output](Project-Documentation/receipt_with_discount_line.jpeg)
+--------------------------------------------------------------------------------
+Account created! #0: Suna Aregay
+--------------------------------------------------------------------------------
 
-## Receipt with NO Discount Applied
+Enter D=Deposit, W=Withdrawal, Q=Quit: no
+Invalid option. Please try again.
 
-![Program output](Project-Documentation/receipt_with_no_discount_line.jpeg)
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: d
+What amount would you like to deposit? 1000.4455
+Invalid input. Please try again...
+What amount would you like to deposit? -88.32
+Invalid input. Please try again...
+What amount would you like to deposit? 165.44
+Deposit successful! Current balance: 165.44
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: w
+What amount would you like to withdraw? 200
+Invalid amount [200.0]! Amount can not be greater than balance [165.44].
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: w
+What amount would you like to withdraw? 50
+Withdrawal successful! Current balance: 115.44
+
+--------------------------------------------------------------------------------
+
+Enter D=Deposit, W=Withdrawal, Q=Quit: q
+````
 
 # New Concepts
-- Java 17 features
+- Object-Oriented Programming (OOP)
 
 - Working with methods
 
-- Conditional logic
+- Constructors
 
-- printf formatting
+- Method overriding (toString())
 
-    - Precision control
+- Exception handling
 
-    - Column alignment
+- Throwing custom errors
 
-    - Percent symbol (%%)
-
-- JavaDoc comments
-
-- Clean class-level documentation
-
-- GitHub version control with meaningful commits
+- Input validation
 
 ## Maintainers
 [@suna2km](https://github.com/suna2km) Suna Aregay
