@@ -79,8 +79,9 @@ public class Account {
     public void setFirstName(String firstName) {
         if (firstName == null || firstName.isEmpty()) {
             throw new IllegalArgumentException("Invalid first name! Name can't be blank for id: " + id);
+        } else {
+            this.firstName = firstName;
         }
-        this.firstName = firstName;
     }
 
     /**
@@ -92,8 +93,9 @@ public class Account {
     public void setLastName(String lastName) {
         if (lastName == null || lastName.isEmpty()) {
             throw new IllegalArgumentException("Invalid last name! Name can't be blank for id: " + id);
+        } else {
+            this.lastName = lastName;
         }
-        this.lastName = lastName;
     }
 
     /**
@@ -105,8 +107,9 @@ public class Account {
     public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Amount can't be negative or zero!");
-        }
+        } else {
         this.balance += amount;
+        }
     }
 
     /**
